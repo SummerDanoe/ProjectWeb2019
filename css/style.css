@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+/*========== Kleur variabelen*/
+
+:root {
+ --achtergrond-grijs: #E6E6E9;
+ --blauw: #263272;
+ --geel:#FCCC04;
+}
+/*gebruik: var(--achtergrond-grijs)*/
+
+/*========== Algemene selectoren*/
+
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+p, h1, h2, h3 {
+	color: var(--blauw);
+}
+/*========== Mobiel*/
+
+/*Main*/
+
+body/*achtergrond kleur e.d.*/ {
+	background-color: var(--achtergrond-grijs);
+}
+
+/*categorieen*/
+
+h2{
+	margin-top:2rem;
+}
+
+section{
+	display:flex;
+	width:100%;
+	overflow-x: scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+article:first-of-type{
+	margin-left:calc((100% - 17rem) / 2);
+}
+
+/*Kaartje*/
+
+article /*Kaartje*/ {
+	margin: 1rem;
+	background-color: white;
+	width: 17rem;
+	height: 17rem;
+	position: relative;
+	flex:none;
+
+}
+
+
+article img:first-of-type /*thumbnail*/ {
+	width: 100%;
+	height: 14rem;
+	overflow: hidden;
+	object-fit: cover;
+}
+h3/*verhaal titel*/ {
+	float: left;
+	font-size: 1.1rem;
+	margin-left: 1rem;
+	margin-top: 0.7rem;
+}
+article p:first-of-type/*verhaal nummer*/ {
+	float: right;
+	margin-right: 1rem;
+	font-size: 1.1rem;
+	margin-top: 0.7rem;
+}
+article p:nth-of-type(2)/*tijd*/ {
+	font-size: 0.8rem;
+	display: block;
+	height: 2.5rem;
+	width: 2.5rem;
+	background-color: white;
+	text-align: center;
+	padding-top: 0.8rem;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+svg/*hart*/ {
+	background-color: white;
+	fill: var(--blauw);
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0.4rem;
+	position: absolute;
+	top: 0;
+	right: 3rem;
+}
+/*progress{
+	height:3px;
+	width:100%;
+	border:none;
+}*/
+
+
+progress {
+	color: var(--geel);
+	background-color:white;
+	position:relative;
+	height: 0.3rem;
+	bottom: 3rem;
+	border: none;
+	width: 100%;
+
+}
+
+/*kleur veranderen voor alle browsers
+bron: https://stackoverflow.com/questions/45507970/how-can-i-change-the-color-of-a-progress-bar-value-in-html#*/
+progress::-webkit-progress-value {
+ background: var(--geel);;
+}
+ progress::-moz-progress-bar {
+ background: var(--geel);
+}
+ progress::-webkit-progress-value {
+ background: var(--geel);;
+}
+ progress::-webkit-progress-bar {
+ background: var(--geel);;
+}
