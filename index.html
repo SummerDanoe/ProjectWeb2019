@@ -2,8 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="css/reset.css"> <!-- CSS reset-->
-<link rel="stylesheet" type="text/css" href="css/style.css"> <!-- Stylesheet-->
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<!-- CSS reset-->
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<!-- Stylesheet-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <title>home</title>
@@ -11,64 +13,183 @@
 
 <body>
 
-
-	<main>
-		
-		<section>
-
-			<!--<h2>5 minuten verhalen</h2>-->
-			
-			<article>
-			<!--Eric Lucassen
-			Favorieten
-			Ongelezen-->
-			
-				<img alt="vormgegeven verhaal Eric Lucassen" src="img/ericlucassen.jpg">
-	<!---->		
-				<h3>Eric Lucassen</h3>
-			
-				<p>45</p>
-			
-				<p class="tijd">5 min</p>
-			
-				<svg viewBox="0 0 512 512">
-					<path id="heart" d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"/>
-				</svg>
-			
-			</article>
-		
+<!--Header-->
 	
-			<article>
-			<!--Zombie
-			deels gelezen-->
+<header>
+	<nav>
+		<a href="#">
+			<p>NS stories</p>
+			<img alt="home" src="img/nslogo.png">
+		</a>
+		
+		<a href="#">
+			<p>Opgeslagen</p>
+			<img alt="opgeslagen" src="img/hart.png">
+				
+		</a>
+		
+		<a href="#">
+			<p>Login</p>
+			<img alt="login" src="img/login.png">
+		</a>
+		
+	</nav>
+</header>
+	
+<main> 
+	
+	<!--Categorie: 5 minuten -->
+	<section>
+		<h2>5 minuten</h2>
+		
+		<article> 
+			<!--Eric Lucassen, Favorieten, Ongelezen--> 
 			
-				<img alt="vormgegeven verhaal Zombie" src="img/zombie.jpg">
+			<img alt="vormgegeven verhaal Eric Lucassen" src="img/ericlucassen.jpg">
+			<h3>Eric Lucassen</h3>
+			<p>45</p>
+			<p class="tijd">5 min</p>
+			<svg viewBox="0 0 512 512">
+				<path d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"/>
+			</svg>
+		</article>
+		
+		<article> 
+			<!--Zombie, deels gelezen--> 
 			
-				<h3>Zombie</h3>
+			<img alt="vormgegeven verhaal Zombie" src="img/zombie.jpg">
+			<h3>Zombie</h3>
+			<p>12</p>
+			<p class="tijd">5 min</p>
+			<progress value="34" 	max="100"></progress>
+		</article>
+		
+		<article> 
+			<!--Cowboy,ongelezen--> 
 			
-				<p>12</p>
+			<img alt="vormgegeven verhaal Cowboy" src="img/cowboy.jpg">
+			<h3>Cowboy</h3>
+			<p>89</p>
+			<p class="tijd">5 min</p>
+		</article>
+	</section>
+	
+	<!--Categorie: nog niet afgelezen-->
+	<section>
+		<h2>Nog niet afgelezen</h2>
+		<article> 
+			<!--Vader tot Zoon, Favorieten, deels gelezen--> 
 			
-				<p class="tijd">5 min</p>
+			<img alt="vormgegeven verhaal Vader tot Zoon" src="img/vadertotzoon.jpeg">
+			<h3>Vader tot zoon</h3>
+			<p>31</p>
+			<p class="tijd">15 min</p>
+			<progress value="75" max="100"></progress>
+		</article>
+		
+		<article> 
+			<!--Poepen,deels gelezen--> 
 			
-				<progress value="34" 	max="100"></progress>
+			<img alt="vormgegeven verhaal Blind" src="img/essentie.jpg">
+			<h3>Essentie</h3>
+			<p>1</p>
+			<p class="tijd">2 min</p>
+			<svg viewBox="0 0 512 512">
+				<path d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"/>
+			</svg>
+			<progress value="12" 	max="100"></progress>
+		</article>
+		
+		<article> 
+			<!--Haiku
+			deels gelezen--> 
 			
-			</article>
+			<img alt="vormgegeven verhaal Cowboy" src="img/haiku.jpg">
+			<h3>Haiku</h3>
+			<p>43</p>
+			<p class="tijd">5 min</p>
+			<progress value="12" max="100"></progress>
+		</article>
+	</section>
+	
+	
+	<!--Categorie: Opgeslagen verhalen-->
+	<section>
+		<h2>Opgeslagen verhalen</h2>
+		
+		<article> 
+			<!--Oud testament, opgeslagen, ongelezen--> 
 			
-			<article>
-			<!--Cowboy
-			ongelezen-->
+			<img alt="vormgegeven verhaal Oud testament" src="img/oudtestament.jpeg">
+			<h3>Oud Testament</h3>
+			<p>58</p>
+			<p class="tijd">15 min</p>
+			<svg viewBox="0 0 512 512">
+				<path d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"/>
+			</svg>
+		</article>
+		
+		<article> 
+			<!--Managerstaal, Opgeslagen, Ongelezen--> 
 			
-				<img alt="vormgegeven verhaal Cowboy" src="img/cowboy.jpg">
+			<img alt="vormgegeven verhaal Blind" src="img/managerstaal.jpg">
+			<h3>Managerstaal</h3>
+			<p>6</p>
+			<p class="tijd">2 min</p>
+			<svg viewBox="0 0 512 512">
+				<path d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"/>
+			</svg>
+		</article>
+		
+		<article> 
+			<!--Poepen,deels gelezen--> 
 			
-				<h3>Cowboy</h3>
+			<img alt="vormgegeven verhaal Kinderboek" src="img/kinderboek.png">
+			<h3>Kinderboek</h3>
+			<p>75</p>
+			<p class="tijd">10 min</p>
+			<svg viewBox="0 0 512 512">
+				<path d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"/>
+			</svg>
+		</article>
+	</section>
+	
+
+		<!--Categorie: Vaak opgeslagen in Haarlem-->
+	<section>
+		<h2> Vaak opgeslagen in Haarlem</h2>
+		
+		<article> 
+			<!--Hongerwinter,deels gelezen--> 
+		
+			<img alt="vormgegeven verhaal Hongerwinter" src="img/hongerwinter.jpg">
+			<h3>Hongerwinter</h3>
+			<p>89</p>
+			<p class="tijd">10 min</p>
+			<progress value="88" max="100"></progress>
+		</article>
+		
+		<article> 
+			<!--Poepen,deels gelezen--> 
 			
-				<p>89</p>
+			<img alt="vormgegeven verhaal Jezus" src="img/jezus.jpg">
+			<h3>Jezus</h3>
+			<p>44</p>
+			<p class="tijd">15 min</p>
+			<svg viewBox="0 0 512 512">
+				<path d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"/>
+			</svg>
+		</article>
+		
+		<article> 
+			<!--Poepen,deels gelezen--> 
 			
-				<p class="tijd">5 min</p>
-			
-			</article>
-			
-		</section>	
-	</main>
+			<img alt="vormgegeven verhaal Scenario" src="img/scenario.jpg">
+			<h3>Scenario</h3>
+			<p>75</p>
+			<p class="tijd">10 min</p>
+		</article>
+	</section>
+</main>
 </body>
 </html>

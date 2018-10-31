@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /*========== Kleur variabelen*/
 
 :root {
@@ -19,46 +18,82 @@ p, h1, h2, h3 {
 	color: var(--blauw);
 }
 /*========== Mobiel*/
+/*Header*/
 
+header {
+	background-color: var(--blauw);
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 3rem;
+	z-index: 1;
+}
+header nav a p {
+	color: white;
+	display: none;
+}
+header nav a {
+	font-family: 'Roboto', sans-serif;
+	color: white;
+}
+header nav a img {
+	display: block;
+	height: 2rem;
+	position: fixed;
+}
+[src="img/nslogo.png"] {
+	left: 1rem;
+	top: 0.5rem;
+}
+[src="img/hart.png"] {
+	top:0.5rem;
+	right:3.5rem;
+}
+[src="img/login.png"] {
+	top:0.5rem;
+	right:1rem;
+}
 /*Main*/
 
 body/*achtergrond kleur e.d.*/ {
 	background-color: var(--achtergrond-grijs);
 }
-
 /*categorieen*/
 
-h2{
-	margin-top:2rem;
-}
 
-section{
-	display:flex;
-	width:100%;
+section {
+	display: flex;
+	width: 100%;
 	overflow-x: scroll;
+	margin-top: 2rem;
 }
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent; /* make scrollbar transparent */
+section:first-of-type {
+	margin-top: 4rem;
+}
+article:first-of-type {
+	margin-left: calc((100% - 17rem) / 2);
+}
+article:last-of-type{
+	margin-right:2rem;
+	/*Waarom werkt dit niet?*/
 }
 
-article:first-of-type{
-	margin-left:calc((100% - 17rem) / 2);
+h2 {
+	position: absolute;
+	margin-left: calc((100% - 17rem) / 2);
+	font-size: 1.2rem;
 }
-
 /*Kaartje*/
 
 article /*Kaartje*/ {
 	margin: 1rem;
+	margin-top: 2rem;
 	background-color: white;
 	width: 17rem;
 	height: 17rem;
 	position: relative;
-	flex:none;
-
+	flex: none;
 }
-
-
 article img:first-of-type /*thumbnail*/ {
 	width: 100%;
 	height: 14rem;
@@ -89,7 +124,7 @@ article p:nth-of-type(2)/*tijd*/ {
 	top: 0;
 	right: 0;
 }
-svg/*hart*/ {
+article svg/*hart*/ {
 	background-color: white;
 	fill: var(--blauw);
 	width: 2.5rem;
@@ -108,13 +143,12 @@ svg/*hart*/ {
 
 progress {
 	color: var(--geel);
-	background-color:white;
-	position:relative;
+	background-color: white;
+	position: relative;
 	height: 0.3rem;
-	bottom: 3rem;
+	bottom: 2.9em;
 	border: none;
 	width: 100%;
-
 }
 
 /*kleur veranderen voor alle browsers
