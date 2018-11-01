@@ -170,6 +170,12 @@ progress::-webkit-progress-value {
  background: var(--geel);;
 }
 
+/*section:nth-of-type(even) article:nth-of-type(odd), section:nth-of-type(odd) article:nth-of-type(even){
+	background-color:blue;
+}*/
+
+
+
 /*========== Mobiel tussen*/
 
 @media (min-width: 30rem) {
@@ -185,18 +191,26 @@ progress::-webkit-progress-value {
 /*========== Tablet*/
 
 
+
 @media (min-width: 45rem) {
-	.test{
+	
+	/*Hier gebruik ik class, want anders moet ik het aanroepen als
+	
+	section:nth-of-type(even) article:nth-of-type(odd), section:nth-of-type(odd) article:nth-of-type(even)*/
+	
+	
+	
+	.breed{
 		width:22rem;
 	}
 	
-	.test h3/*verhaal titel*/ {
+	.breed h3/*verhaal titel*/ {
 		float: left;
 		font-size: 1.1rem;
 		margin-left: 11.1rem;
 		margin-top: 0.7rem;
 	}
-	.test img:first-of-type{
+	.breed img:first-of-type{
 		position:absolute;
 		display:block;
 		width:10rem;
@@ -204,30 +218,31 @@ progress::-webkit-progress-value {
 		left:0;
 	}
 
-	.test p:first-of-type/*verhaal nummer*/ {
+	.breed p:first-of-type/*verhaal nummer*/ {
 		float: right;
 		margin-right: 1rem;
 		font-size: 1.1rem;
 		margin-top: 0.7rem;
 	}
-	.test p:nth-of-type(2)/*tijd*/ {
+	.breed p:nth-of-type(2)/*tijd*/ {
 		left:7rem;
 	}
 
-	.test p:nth-of-type(3)/*beschrijving*/{
+	.breed p:nth-of-type(3)/*beschrijving*/{
 		display:block;
 		position:absolute;
 		overflow:hidden;
 		width:10rem;
 		left:11.1em;
+		top:2.6rem;
 		height:13rem;
 	}
 
-.test svg/*hart*/ {
+.breed svg/*hart*/ {
 	left:4rem;
 	}
-progress {
-	bottom: -14.1rem;
+.breed progress {
+	top: 14.1rem;
 	left:10rem;
 	width: 12rem;
 	}
