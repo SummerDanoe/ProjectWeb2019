@@ -13,11 +13,18 @@
 * {
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
+	/*transition*/
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
 }
 p, h1, h2, h3 {
 	color: var(--blauw);
 }
+
 /*========== Mobiel*/
+
 /*Header*/
 
 header {
@@ -93,6 +100,7 @@ article /*Kaartje*/ {
 	height: 17rem;
 	position: relative;
 	flex: none;
+	
 }
 article img:first-of-type /*thumbnail*/ {
 	width: 100%;
@@ -124,6 +132,9 @@ article p:nth-of-type(2)/*tijd*/ {
 	top: 0;
 	right: 0;
 }
+article p:nth-of-type(3){
+	display:none;
+}
 article svg/*hart*/ {
 	background-color: white;
 	fill: var(--blauw);
@@ -134,13 +145,6 @@ article svg/*hart*/ {
 	top: 0;
 	right: 3rem;
 }
-/*progress{
-	height:3px;
-	width:100%;
-	border:none;
-}*/
-
-
 progress {
 	color: var(--geel);
 	background-color: white;
@@ -164,4 +168,67 @@ progress::-webkit-progress-value {
 }
  progress::-webkit-progress-bar {
  background: var(--geel);;
+}
+
+/*========== Mobiel tussen*/
+
+@media (min-width: 30rem) {
+	h2{
+		margin-left: 2rem;
+	}
+	article:first-of-type {
+	margin-left:2rem;
+		
+	}
+}
+
+/*========== Tablet*/
+
+
+@media (min-width: 45rem) {
+	.test{
+		width:22rem;
+	}
+	
+	.test h3/*verhaal titel*/ {
+		float: left;
+		font-size: 1.1rem;
+		margin-left: 11.1rem;
+		margin-top: 0.7rem;
+	}
+	.test img:first-of-type{
+		position:absolute;
+		display:block;
+		width:10rem;
+		height:100%;
+		left:0;
+	}
+
+	.test p:first-of-type/*verhaal nummer*/ {
+		float: right;
+		margin-right: 1rem;
+		font-size: 1.1rem;
+		margin-top: 0.7rem;
+	}
+	.test p:nth-of-type(2)/*tijd*/ {
+		left:7rem;
+	}
+
+	.test p:nth-of-type(3)/*beschrijving*/{
+		display:block;
+		position:absolute;
+		overflow:hidden;
+		width:10rem;
+		left:11.1em;
+		height:13rem;
+	}
+
+.test svg/*hart*/ {
+	left:4rem;
+	}
+progress {
+	bottom: -14.1rem;
+	left:10rem;
+	width: 12rem;
+	}
 }
