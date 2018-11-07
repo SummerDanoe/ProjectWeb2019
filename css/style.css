@@ -36,6 +36,8 @@ header {
 	z-index: 1;
 }
 header nav a p {
+	text-decoration:none;
+	font-size:1.5rem;
 	color: white;
 	display: none;
 }
@@ -60,6 +62,33 @@ header nav a img {
 	top:0.5rem;
 	right:1rem;
 }
+
+/*button*/
+button{
+	z-index: 1;
+	height:3rem;
+	width:3rem;
+	background-color: var(--blauw);
+	position:fixed;
+	bottom:0;
+	padding:0;
+	border:0;
+	border-radius:0;
+}
+
+button img{
+	height:100%;
+	width:100%;
+	
+}
+button:first-of-type/*zoeken*/{
+	bottom:10rem;
+}
+button:nth-of-type(2)/*darkmode*/{
+	padding:0.7em;
+	bottom:6rem;
+}
+
 /*Main*/
 
 body/*achtergrond kleur e.d.*/ {
@@ -194,11 +223,46 @@ progress::-webkit-progress-value {
 
 @media (min-width: 45rem) {
 	
+	/*header*/
+	
+	header nav a p {
+		display:block;
+		position:fixed;
+		
+	}
+	
+	header nav a:first-of-type /*NS stories*/ p{
+		left:7rem;
+	}
+	
+	header nav a:nth-of-type(2) p /*opgeslagen*/{
+		left:7rem;
+	} 
+	header nav a:nth-of-type(2) p/*login*/{
+		left:7rem;
+	}
+	
+	/*[src="img/nslogo.png"] {
+	left: 1rem;
+	top: 0.5rem;
+	}*/
+	
+	[src="img/hart.png"] {
+	top:0.5rem;
+		
+		
+	right:10rem;
+	}
+	
+/*	[src="img/login.png"] {
+	top:0.5rem;
+	right:1rem;
+	}
+*/
+	/*Kaartjes*/
+	
 	/*Hier gebruik ik class, want anders moet ik het aanroepen als
-	
 	section:nth-of-type(even) article:nth-of-type(odd), section:nth-of-type(odd) article:nth-of-type(even)*/
-	
-	
 	
 	.breed{
 		width:22rem;
@@ -238,10 +302,11 @@ progress::-webkit-progress-value {
 		height:13rem;
 	}
 
-.breed svg/*hart*/ {
-	left:4rem;
+	.breed svg/*hart*/ {
+		left:4rem;
 	}
-.breed progress {
+	
+	.breed progress {
 	top: 14.1rem;
 	left:10rem;
 	width: 12rem;
