@@ -75,6 +75,9 @@ button{
 	border:0;
 	border-radius:0;
 }
+button p{
+	display:none;
+}
 
 button img{
 	height:100%;
@@ -228,18 +231,19 @@ progress::-webkit-progress-value {
 	header nav a p {
 		display:block;
 		position:fixed;
-		
+		font-size:1.1rem;
+		top:0.9rem;
 	}
-	
 	header nav a:first-of-type /*NS stories*/ p{
 		left:7rem;
 	}
 	
 	header nav a:nth-of-type(2) p /*opgeslagen*/{
-		left:7rem;
+		right:17rem;
 	} 
-	header nav a:nth-of-type(2) p/*login*/{
-		left:7rem;
+	header nav a:nth-of-type(3) p/*login*/{
+		right:10rem;
+		
 	}
 	
 	/*[src="img/nslogo.png"] {
@@ -249,16 +253,28 @@ progress::-webkit-progress-value {
 	
 	[src="img/hart.png"] {
 	top:0.5rem;
-		
-		
-	right:10rem;
+	right:14rem;
 	}
 	
-/*	[src="img/login.png"] {
+	[src="img/login.png"] {
 	top:0.5rem;
-	right:1rem;
+	right:7.5rem;
 	}
-*/
+	
+	/*buttons*/
+	
+	button{
+		background-color:transparent;
+	}
+	button:first-of-type/*zoeken*/{
+		top:-0.1rem;
+		right:0.5rem;
+	}
+	button:nth-of-type(2)/*darkmode*/{
+		top:-0.1rem;
+		right:3.5rem;
+	}
+	
 	/*Kaartjes*/
 	
 	/*Hier gebruik ik class, want anders moet ik het aanroepen als
@@ -310,5 +326,66 @@ progress::-webkit-progress-value {
 	top: 14.1rem;
 	left:10rem;
 	width: 12rem;
+	background-color:transparent;
 	}
+}
+
+/*========== Tablet tussen*/
+
+@media (min-width: 60rem){
+	body{
+	}
+	section {
+	overflow-x: visible;
+	justify-content: space-around
+}
+	h2{
+		flex:none;
+	}
+	article{
+		margin: 2rem 0.5rem 0.5rem;
+		flex-shrink: 2;
+		
+	}
+	.breed p:nth-of-type(3)/*beschrijving*/{
+		display:block;
+		position:absolute;
+		overflow:hidden;
+		width:calc(90% - 10rem);
+		left:11.1em;
+		top:2.6rem;
+		height:13rem;
+	}
+	.breed progress {
+	top: 14.1rem;
+	left:10rem;
+	width:calc(100% - 10rem);
+	}
+}
+
+
+/*========== desktop*/
+
+@media (min-width: 70rem){
+	
+	/*header*/
+	
+	header{
+		width:15rem;
+		height:100%; 
+	}
+	
+	/*main*/
+	
+	main{
+		width:calc(100% - 15rem);
+		float:right;
+	}
+	
+	section{
+		overflow-x:visible;
+		display:flex;
+		flex-shrink:0;
+	}
+	
 }
