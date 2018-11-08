@@ -337,30 +337,37 @@ progress::-webkit-progress-value {
 	}
 	section {
 	overflow-x: visible;
-	justify-content: space-around
+	justify-content: space-between;
 }
 	h2{
 		flex:none;
 	}
+	/*Fluid kaartje*/
 	article{
 		margin: 2rem 0.5rem 0.5rem;
 		flex-shrink: 2;
-		
+	}
+	.breed p:nth-of-type(2)/*tijd*/ {
+		left:30%;
+	}
+	.breed svg/*hart*/ {
+		left:17%;
+	}
+	.breed h3{
+		margin-left:50%;
 	}
 	.breed p:nth-of-type(3)/*beschrijving*/{
-		display:block;
-		position:absolute;
-		overflow:hidden;
-		width:calc(90% - 10rem);
-		left:11.1em;
-		top:2.6rem;
-		height:13rem;
+		width:45%;
+		left:50%;
 	}
 	.breed progress {
-	top: 14.1rem;
-	left:10rem;
+	left:45%;
 	width:calc(100% - 10rem);
 	}
+	.breed img:first-of-type{
+		width:45%;
+	}
+	
 }
 
 
@@ -375,6 +382,96 @@ progress::-webkit-progress-value {
 		height:100%; 
 	}
 	
+header nav a p {
+	font-size:1.3rem;
+}
+	header nav a:first-of-type /*NS stories*/ p{
+		top:1.8rem;
+		left:7.3rem;
+	}
+	
+	[src="img/nslogo.png"] {
+		left: 1rem;
+		top: 1.5em;
+	}
+	
+	header nav a:nth-of-type(2) p /*opgeslagen*/{
+		left:2rem;
+		top:10rem;
+	} 
+	
+	[src="img/hart.png"] {
+		top:9.8rem;
+		left:11rem;
+		width:2rem;
+		height:auto;
+	}
+	header nav a:nth-of-type(3) p/*login*/{
+		left:2rem;
+		top:13.6rem;
+	}
+
+	[src="img/login.png"] {
+		width:2rem;
+		height:auto;
+		top:13rem;
+		left:11rem;
+	}
+	
+	button{
+		position:fixed;
+		/*border:white dotted;*/
+		cursor:pointer;
+		width:15rem;
+		padding:0;
+		margin:0;
+		
+	}
+	button:first-of-type/*zoeken*/{
+		left:0;
+		top:16rem;
+	}
+	button:nth-of-type(2)/*dark mode*/{
+		left:0;
+		top:19rem;
+	}
+	button p{
+		font-size:1.3rem;
+		color:white;
+		display:block;
+		position:fixed;
+		
+	}
+	button img{
+	height:2rem;
+	width:2rem;
+}
+	button:first-of-type p/*zoeken*/{
+		top:17.2rem;
+		left:2rem;
+	}
+	button:first-of-type img/*zoeken*/{
+		position:fixed;
+		height:3rem;
+		width:3rem;
+		top:16.8rem;
+		left:10.3rem;
+	}
+	
+	button:nth-of-type(2) p/*Dark mode*/{
+		top:21rem;
+		left:2rem;
+	}
+	
+	button:nth-of-type(2) img /*dark mode*/{
+		position:fixed;
+		height:2rem;
+		width:2rem;
+		top:21rem;
+		left:11rem;
+	}
+	
+
 	/*main*/
 	
 	main{
@@ -385,7 +482,27 @@ progress::-webkit-progress-value {
 	section{
 		overflow-x:visible;
 		display:flex;
-		flex-shrink:0;
 	}
-	
+	section:first-of-type{
+		margin-top:2rem;
+	}
+	h2{
+		font-size:1.3rem;
+	}
+	/*Fluid kaartje*/
+	article{
+		flex-grow:1;
+		margin: 2rem 1rem 1rem;
+		
+	}
+	article.breed{
+		min-width:20rem;
+	}
+	.breed p:nth-of-type(3)/*beschrijving*/{
+	}
+}
+@media (min-width: 92rem){
+	body{
+		background-color:red;
+	}
 }
