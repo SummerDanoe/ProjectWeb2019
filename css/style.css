@@ -333,7 +333,13 @@ progress::-webkit-progress-value {
 /*========== Tablet tussen*/
 
 @media (min-width: 60rem){
-	body{
+	
+	/*de transition op de button was echt intens lelijk dus ik moest er iets aan doen*/
+	
+	button img{
+	-moz-transition: none;
+    -webkit-transition: none;
+    transition: none;
 	}
 	section {
 	overflow-x: visible;
@@ -374,6 +380,7 @@ progress::-webkit-progress-value {
 /*========== desktop*/
 
 @media (min-width: 70rem){
+	
 	
 	/*header*/
 	
