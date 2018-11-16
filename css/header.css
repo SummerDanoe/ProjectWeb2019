@@ -86,22 +86,48 @@ button img{
 	
 }
 button:first-of-type/*zoeken*/{
-	bottom:10rem;
+	bottom:9rem;
 }
 button:nth-of-type(2)/*darkmode*/{
 	padding:0.7em;
-	bottom:6rem;
+	bottom:5rem;
 }
 /*========== Mobiel tussen*/
 
 @media (min-width: 30rem) {
-	h2{
-		margin-left: 2rem;
+		
+	/*header*/
+	
+	header nav a p {
+		display:block;
+		position:fixed;
+		font-size:1.1rem;
+		top:0.9rem;
 	}
-	article:first-of-type {
-	margin-left:2rem;
+	header nav a:first-of-type /*NS stories*/ p{
+		display:none;
+	}
+	
+	header nav a:nth-of-type(2) p /*opgeslagen*/{
+		right:11rem;
+	} 
+	header nav a:nth-of-type(3) p/*login*/{
+		right:3.5rem;
 		
 	}
+	
+	[src="img/hart.png"] {
+	top:0.5rem;
+	right:8rem;
+	}
+	
+	[src="img/login.png"] {
+	top:0.5rem;
+	right:1rem;
+	}
+
+
+}
 /*========== Tablet*/
 @media (min-width: 45rem) {
 	
@@ -166,10 +192,6 @@ button:nth-of-type(2)/*darkmode*/{
     -webkit-transition: none;
     transition: none;
 	}
-	section {
-	overflow-x: visible;
-	justify-content: space-between;
-}
 }
 
 
@@ -249,7 +271,7 @@ button:nth-of-type(2)/*darkmode*/{
 	button img{
 	height:2rem;
 	width:2rem;
-}
+	}
 	button:first-of-type p/*zoeken*/{
 		top:17.2rem;
 		left:2rem;
@@ -274,6 +296,5 @@ button:nth-of-type(2)/*darkmode*/{
 		top:21rem;
 		left:11rem;
 	}
-	
+
 }
-}|
