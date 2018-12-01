@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+}
+body{
+	background-color:purple;
+}
+img{
+	height:100px;
+}

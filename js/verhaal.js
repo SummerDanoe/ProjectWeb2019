@@ -12,6 +12,7 @@ var buttonImage = document.querySelector('button:nth-of-type(3) img').src;
        }
 
 }*/
+
 function toggleImage() {
 	
 	if (buttonImage.indexOf('opslaan.png')!=-1) {
@@ -22,6 +23,5 @@ function toggleImage() {
 	else {
 		document.querySelector('button:nth-of-type(3) img').src = 'img/opslaan.png';
        }
-
 }
 button.addEventListener("click", toggleImage);
