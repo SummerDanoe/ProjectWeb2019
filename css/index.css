@@ -23,6 +23,12 @@ p, h1, h2, h3 {
 	color: var(--blauw);
 }
 
+
+main{
+}
+body > section{
+	display:none;
+}
 /*========== Mobiel*/
 
 /*Main*/
@@ -32,21 +38,17 @@ body/*achtergrond kleur e.d.*/ {
 }
 /*categorieen*/
 
-section {
+main section {
 	display: flex;
 	width: 100%;
 	overflow-x: scroll;
 	margin-top: 2rem;
 }
-section:first-of-type {
+main section:first-of-type {
 	margin-top: 4rem;
 }
-article:first-of-type {
+main section article:first-of-type {
 	margin-left: calc((100% - 17rem) / 2);
-}
-article:last-of-type{
-	margin-right:2rem;
-	/*Waarom werkt dit niet?*/
 }
 
 h2 {
@@ -56,7 +58,7 @@ h2 {
 }
 /*Kaartje*/
 
-article /*Kaartje*/ {
+main section article /*Kaartje*/ {
 	margin: 1rem;
 	margin-top: 2rem;
 	background-color: white;
@@ -66,25 +68,25 @@ article /*Kaartje*/ {
 	flex: none;
 	
 }
-article img:first-of-type /*thumbnail*/ {
+main section article img:first-of-type /*thumbnail*/ {
 	width: 100%;
 	height: 14rem;
 	overflow: hidden;
 	object-fit: cover;
 }
-h3/*verhaal titel*/ {
+main section h3/*verhaal titel*/ {
 	float: left;
 	font-size: 1.1rem;
 	margin-left: 1rem;
 	margin-top: 0.7rem;
 }
-article p:first-of-type/*verhaal nummer*/ {
+main section article p:first-of-type/*verhaal nummer*/ {
 	float: right;
 	margin-right: 1rem;
 	font-size: 1.1rem;
 	margin-top: 0.7rem;
 }
-article p:nth-of-type(2)/*tijd*/ {
+main section article p:nth-of-type(2)/*tijd*/ {
 	font-size: 0.8rem;
 	display: block;
 	height: 2.5rem;
@@ -96,10 +98,10 @@ article p:nth-of-type(2)/*tijd*/ {
 	top: 0;
 	right: 0;
 }
-article p:nth-of-type(3){
+main section article p:nth-of-type(3){
 	display:none;
 }
-article svg/*hart*/ {
+main section article svg/*hart*/ {
 	background-color: white;
 	fill: var(--blauw);
 	width: 2.5rem;
@@ -109,7 +111,7 @@ article svg/*hart*/ {
 	top: 0;
 	right: 3rem;
 }
-progress {
+main section article progress {
 	color: var(--geel);
 	background-color: white;
 	position: relative;
@@ -118,6 +120,8 @@ progress {
 	border: none;
 	width: 100%;
 }
+
+
 
 /*kleur veranderen voor alle browsers
 bron: https://stackoverflow.com/questions/45507970/how-can-i-change-the-color-of-a-progress-bar-value-in-html#*/
@@ -134,11 +138,102 @@ progress::-webkit-progress-value {
  background: var(--geel);;
 }
 
-/*section:nth-of-type(even) article:nth-of-type(odd), section:nth-of-type(odd) article:nth-of-type(even){
-	background-color:blue;
-}*/
+/*search results*/
 
+/*eerste section direct in de body*/
 
+body > section{
+	overflow-x: auto;
+	overflow-y:hidden;
+	display:flex;
+	flex-direction:column;
+	font-family: 'Roboto', sans-serif;
+	margin-left: calc((100% - 19rem) / 2);
+	
+}
+body > section > input{
+	position:fixed;
+	width:calc(100% - 2rem);
+	left:1rem;
+	right:1rem;
+	height:3rem;
+	border:none;
+	top:4rem;
+	font-size:1.5rem;
+	padding-left:2rem;
+	padding-right:2rem;
+	color:var(--blauw);
+	z-index:2;
+	
+}
+body section > img:first-of-type{
+	position:fixed;
+	height:3rem;
+	top:4rem;
+	right:4.5rem;
+	z-index:3;
+	border-right:solid 2px var(--blauw);
+}
+body section > img:nth-of-type(2){
+	position:fixed;
+	height:3rem;
+	width:3.5rem;
+	padding:0.7rem;
+	top:4rem;
+	right:1rem;
+	z-index:3;
+}
+
+body section h2{
+	position:inherit;
+	margin-top:2rem;
+	margin-left:1rem;
+	font-size: 1.3rem;
+}
+body section h2:first-of-type{
+	margin-top:8rem;
+	
+}
+
+body > section > article.breed{
+	}
+	
+body > section > article.breed h3/*verhaal titel*/ {
+		margin-left: 6.5rem;
+	}
+body > section > article.breed img:first-of-type{
+		position:absolute;
+		display:block;
+		width:6rem;
+		height:100%;
+		left:0;
+	}
+
+body > section > article.breed p:first-of-type/*verhaal nummer*/ {
+	}
+body > section > article.breed p:nth-of-type(2)/*tijd*/ {
+		left:3.2rem;
+	}
+
+body > section > article.breed p:nth-of-type(3)/*beschrijving*/{
+		display:block;
+		position:absolute;
+		overflow:hidden;
+		width:10rem;
+		left:6.5em;
+		top:2.6rem;
+		height:13rem;
+	}
+
+body > section > article.breed svg/*hart*/ {
+		left:0.4rem;
+	}
+body > section > article.breed progress {
+	top: 14.1rem;
+	left:6rem;
+	width: 11rem;
+	background-color:transparent;
+	}
 
 /*========== Mobiel tussen*/
 
@@ -146,10 +241,18 @@ progress::-webkit-progress-value {
 	h2{
 		margin-left: 2rem;
 	}
-	article:first-of-type {
+	main article:first-of-type {
 	margin-left:2rem;
 		
 	}
+	body > section input{
+		width:20rem;
+	margin-left: calc((100% - 22rem) / 2);
+		
+	}
+	body section > img/*zoek icon in searchbalk*/{
+	margin-right: calc((100% - 22rem) / 2);
+}
 }
 
 /*========== Tablet*/
