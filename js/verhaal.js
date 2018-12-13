@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 //Selecteer originele afbeelding en knop
 var img = document.querySelector('button:nth-of-type(3) img');
 var button =  document.querySelector('button:nth-of-type(3)');
@@ -30,6 +31,11 @@ var pijlLocatie = document.querySelector('body > p');
 	//popup
 
 
+=======
+// JavaScript Document
+var button = document.querySelector('button:nth-of-type(3)');
+var buttonImage = document.querySelector('button:nth-of-type(3) img').src;
+>>>>>>> parent of 141bec3... microinteractie werkt!
 =======
 // JavaScript Document
 var button = document.querySelector('button:nth-of-type(3)');
