@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Selecteer originele afbeelding en knop
 var img = document.querySelector('button:nth-of-type(3) img');
 var button =  document.querySelector('button:nth-of-type(3)');
@@ -29,52 +30,32 @@ var pijlLocatie = document.querySelector('body > p');
 	//popup
 
 
+=======
+// JavaScript Document
+var button = document.querySelector('button:nth-of-type(3)');
+var buttonImage = document.querySelector('button:nth-of-type(3) img').src;
+>>>>>>> parent of 141bec3... microinteractie werkt!
 
+/*function toggleImage() {
 	
+	if (buttonImage.indexOf('opslaan.png')!=-1) {
+		document.querySelector('button:nth-of-type(3) img').src  = 'img/opgeslagen.png';
+        }
+	else {
+		document.querySelector('button:nth-of-type(3) img').src = 'img/opslaan.png';
+       }
 
-//Toggle image bron: https://stackoverflow.com/questions/39892794/toggle-image-in-pure-javascript
-function animatie(){
+}*/
 
-if(state){
-//verander afbeelding
-	state = false;
-	img.src = gifReverse;
-	setTimeout(function(){img.src = opslaan;},500);
+function toggleImage() {
 	
-//elementen aanmaken
-	document.querySelector('body').appendChild(popUp);
-	document.querySelector('body').appendChild(pijl);
-	popUp.appendChild(verwijderd);
-	
-//elementen verwijderen 
-	setTimeout(function(){
-	popUp.parentNode.removeChild(popUp);
-	verwijderd.parentNode.removeChild(verwijderd);
-	pijl.parentNode.removeChild(pijl);
-	},3000);
-  }
-	
-
-  else{
-	  
-//verander afbeelding
-    	state = true;
-	img.src = gif;
-	setTimeout(function(){
-	img.src = opgeslagen;},500);
-	  
-//elementen aanmaken
-	document.querySelector('body').appendChild(popUp);
-	document.querySelector('body').appendChild(pijl);
-	popUp.appendChild(toegevoegd);
-	  
-//elementen verwijderen 
-	setTimeout(function(){
-	popUp.parentNode.removeChild(popUp);
-	toegevoegd.parentNode.removeChild(toegevoegd);
-	pijl.parentNode.removeChild(pijl);
-	},3000);
-  }
+	if (buttonImage.indexOf('opslaan.png')!=-1) {
+		document.querySelector('button:nth-of-type(3) img').src  = 'img/opslaanwit.gif';
+		setTimeout(200);
+		document.querySelector('button:nth-of-type(3) img').src  = 'img/opgeslagen.png';
+        }
+	else {
+		document.querySelector('button:nth-of-type(3) img').src = 'img/opslaan.png';
+       }
 }
-
-button.addEventListener("click", animatie); 
+button.addEventListener("click", toggleImage);

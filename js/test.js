@@ -1,32 +1,39 @@
-//Selecteer originele afbeelding
+var opslaan = "img/opslaan.png";
+var opgeslagen = "img/opgeslagen.png";
+var gif = "img/gif.gif";
+var gifReverse = "img/gifreverse.gif";
+var state = false;
 var img = document.getElementById("img");
 
-//afbeeldingslocatie animatie wit
-var opslaan = "img/hart/opslaan.png";
-var opgeslagen = "img/hart/opgeslagen.png";
-var gif = "img//hart/gif.gif";
-var gifReverse = "img/hart/gifreverse.gif";
+	img.addEventListener("click", test);
 
-//boolean state
-
-var state = false;
 //Toggle image bron: https://stackoverflow.com/questions/39892794/toggle-image-in-pure-javascript
-function animatie(){
 
-if(state){
-	//verander afbeelding
+/*function test(){
+	if(state){
+	state = false;
+	img.src = gif;
+	setTimeout(function(){img.src = opgeslagen;},500);
+
+	}
+  else{
+    state = true;
+	img.src = gifReverse;
+	setTimeout(function(){img.src = opslaan;},500);
+  }
+}*/
+function test(){
+	if(state){
 	state = false;
 	img.src = gifReverse;
 	setTimeout(function(){img.src = opslaan;},500);
-	
+
+
 	}
   else{
-	  //verander afbeelding
     state = true;
 	img.src = gif;
 	setTimeout(function(){img.src = opgeslagen;},500);
 	
   }
 }
-
-img.addEventListener("click", animatie); 
