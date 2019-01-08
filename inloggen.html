@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>inloggen</title>
+	
+<!-- CSS reset-->	
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+
+<!-- Header in aparte stylesheet-->	
+<link rel="stylesheet" type="text/css" href="css/header.css">
+	
+<!-- Index stylesheet-->
+<link rel="stylesheet" type="text/css" href="css/styleinloggen.css">
+
+<!-- Dark mode stylesheet-->
+<link rel="stylesheet" type="text/css" href="css/darkindex.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+	
+<header>
+	<nav>
+		<a href="index.html">
+			<p>NS stories</p>
+			<img alt="home" src="img/nslogo.png">
+		</a>
+		
+		<a href="opgeslagen.html">
+			<p>Opgeslagen</p>
+			<img alt="opgeslagen" src="img/hart.png">
+		</a>
+		
+		<a href="inloggen.html">
+			<p>Login</p>
+			<img alt="login" src="img/login.png">
+		</a>
+	</nav>
+</header>
+	
+<a href="zoeken.html">
+	<img src="img/zoeken.png" alt="zoeken">
+	<p>Zoeken</p>
+</a>
+	
+<button>
+	<img src="img/darkmode.png" alt="dark mode">
+	<p>Dark mode</p>
+</button>
+	
+<main>
+	
+	<form>
+		<h1>inloggen</h1>
+		<label for="inlogemail">E-mail</label>
+		<input id="inlogemail" type="email">
+		<label for="inlogwachtwoord">Wachtwoord</label>
+		<input id="inlogwachtwoord" type="password">
+		<input id="inloggen" type="submit" value="Inloggen" required>
+	</form>
+	
+	<form>
+		<h1>Inschrijven</h1>
+		<!--Voornaam-->
+		<label for="voornaam" required>Voornaam</label>
+		<input id="voornaam" type="text" required>
+		<!--Achternaam-->
+		<label for="achternaam">Achternaam</label>
+		<input  id="achternaam" type="text" required>
+		
+		<!--E-mail-->
+		<label for="emailadres">E-mailadres</label>
+		<input id="emailadres" type="email" required placeholder=" voorbeeld@gmail.com ">
+		<!--Wachtwoord 1-->
+		<label for="wachtwoord1">Wachtwoord</label>
+		<input id="wachtwoord1" type="password" required>
+		<!--Wachtwoord 2-->
+		<label for="wachtwoord2">Bevestig wachtwoord</label>
+		<input id="wachtwoord2" type="password" required>
+		<label for="spam">Mogen wij je email's sturen?</label>
+		<input id="spam" type="checkbox" required>
+		<input id="inschrijven" type="submit" value="Inschrijven" required>
+	</form>
+	
+</main>
+<script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+body{
+	background-color:black;
+}
+header, article, button, [href="zoeken.html"]{
+	background-color:#383838;
+	
+}
+
+h2, h3, p, a{
+	color:white;
+}
+article p:nth-of-type(2)/*tijd*/ {
+ color:#383838;
+}
+progress{
+	background-color:#383838;
+}
+
+form{
+	background-color:#383838;
+}
+
+form h1, form label{
+	color:white
+}
+input{
+	border:none;
+}
+
+[type="submit"]{
+	background-color: var(--geel);
+	color:#383838;
+	border:none;
+	
+}
+
+@media (min-width: 45rem){
+	button{
+		/*een gekke bug maar is nu opgelost*/
+		background:transparent;
+	}
+}

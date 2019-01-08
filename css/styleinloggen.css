@@ -1,0 +1,97 @@
+/*=====Dingen=====*/
+body{
+	background-color: var(--achtergrond-grijs);
+}
+main{
+	padding-top:3rem;
+	display:flex;
+	flex-flow:wrap row;
+	justify-content:center;
+	
+	
+}
+h1{
+	font-size:1.5em;
+	color:var(--blauw);
+}
+/*=====form=====*/
+form{
+	display:flex;
+	flex-wrap:nowrap;
+	flex-direction:column;
+	width:18rem;
+	background-color:white;
+	padding:2rem;
+	margin:2rem;
+}
+form:first-of-type{
+	max-height:20rem;
+	align-self:center;
+}
+label{
+	margin-top:0.8rem;
+	color:var(--blauw);
+	
+}
+input{
+	margin-top:0.3rem;
+	height:2rem;
+	border:1px solid;
+	border-radius:3px;
+	border-color:var(--blauw);
+	
+}
+
+[type="submit"]{
+	margin-top:2rem;
+	background:none;
+	border:none;
+	color:white;
+    background-color:var(--blauw);
+	width:10rem;
+	align-self:center;
+	
+}
+
+[type="checkbox"]{
+	align-self:flex-start;
+	
+}
+
+/*Huidige Pagina*/
+
+[src="img/login.png"]{
+	box-sizing:content-box;
+	border-bottom:3px var(--geel) solid;
+	padding-bottom:0.2rem;
+	padding: 0  3px 3px 3px;
+	right: calc(1rem - 3px);
+}
+@media (min-width: 30em){
+	[src="img/login.png"] {
+	padding-left:4.2rem
+	}
+}
+@media (min-width: 45rem){
+	
+	[src="img/login.png"] {
+	top:0.5rem;
+	right:calc(7.5rem - 3px);
+	padding-left:4.2rem
+	}
+}
+
+
+
+@media (min-width: 70rem){
+	main{
+		margin-left:18rem;
+	}
+		[src="img/login.png"] {
+		height:auto;
+		padding-left:9rem;
+			padding-bottom:0.7rem;
+		top:13rem;
+		left:2rem;
+	}
+}

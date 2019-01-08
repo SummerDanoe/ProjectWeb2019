@@ -1,5 +1,19 @@
 
 /*========== Algemene selectoren*/
+
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	/*transition*/
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+p, h1, h2, h3 {
+	color: var(--blauw);
+}
+
 body > section{
 	display:none;
 }
@@ -10,41 +24,37 @@ body > section{
 body/*achtergrond kleur e.d.*/ {
 	background-color: var(--achtergrond-grijs);
 }
-/*categorieen*/
+/*main*/
 
-section {
-	display: flex;
-	width: 100%;
-	overflow-x: scroll;
-	margin-top: 2rem;
-}
-section:first-of-type {
-	margin-top: 4rem;
-}
-article:first-of-type {
-	margin-left: calc((100% - 17rem) / 2);
-}
 
 h2 {
-	position: absolute;
-	margin-left: calc((100% - 17rem) / 2);
 	font-size: 1.2rem;
+	width:100%;
+	text-align:center;
+	margin-top:2rem;
+}
+
+main{
+	width:100%;
+	margin-top:3rem;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
 }
 /*Kaartje*/
 
-article /*Kaartje*/, section a {
+
+article /*Kaartje*/,main a {
 	margin: 1rem;
 	margin-top: 2rem;
 	background-color: white;
 	width: 17rem;
 	height: 17rem;
 	position: relative;
-	flex: none;
+	flex:none;
 	
 }
-section a article{
-	margin:0;
-}
+
 article img:first-of-type /*thumbnail*/ {
 	width: 100%;
 	height: 14rem;
@@ -115,20 +125,32 @@ progress::-webkit-progress-value {
  background: var(--geel);;
 }
 
+/*fix dat ene rare kaartje met autisme*/
+main a{
+	position:relative;
+}
+main a article{
+	
+	position:absolute;
+	top:-2rem;;
+	left:-1rem;
+}
+
+/*actieve pagina*/
+
+[src="img/hart.png"] {
+		box-sizing:content-box;
+	border-bottom:3px var(--geel) solid;
+	padding-bottom:0.2rem;
+	padding: 0  3px 3px 3px;
+	right:calc(3.5rem - 3px);
+}
 /*========== Mobiel tussen*/
 
 @media (min-width: 30rem) {
-	h2{
-		margin-left: 2rem;
-	}
-	article:first-of-type{
-	margin-left:2rem;
-		
-	}
-	
-	section a article{
-		position:relative;
-		left:-2rem;
+	[src="img/hart.png"]{
+	right:calc(8rem - 3px);
+		padding-left:7rem;
 	}
 }
 
@@ -136,9 +158,12 @@ progress::-webkit-progress-value {
 
 @media (min-width: 45rem) {
 	/*Kaartjes*/
-	
+
+	article, main a{
+		max-width:20rem;
+	}
 	.breed{
-		width:22rem;
+		min-width:22rem;
 	}
 	
 	.breed h3/*verhaal titel*/ {
@@ -180,10 +205,13 @@ progress::-webkit-progress-value {
 	}
 	
 	.breed progress {
-	top: 14.1rem;
-	left:10rem;
-	width: 12rem;
-	background-color:transparent;
+		top: 14.1rem;
+		left:10rem;
+		width: 12rem;
+		background-color:transparent;
+	}
+	[src="img/hart.png"]{
+		right:calc(14rem - 3px);
 	}
 }
 
@@ -204,26 +232,7 @@ progress::-webkit-progress-value {
 	}
 	section a article{
 		width:100%
-	}
-	.breed p:nth-of-type(2)/*tijd*/ {
-		left:30%;
-	}
-	.breed img:nth-of-type(2)/*hart*/ {
-		left:17%;
-	}
-	.breed h3{
-		margin-left:50%;
-	}
-	.breed p:nth-of-type(3)/*beschrijving*/{
-		width:45%;
-		left:50%;
-	}
-	.breed progress {
-	left:45%;
-	width:calc(100% - 10rem);
-	}
-	.breed img:first-of-type{
-		width:45%;
+			
 	}
 	
 }
@@ -236,35 +245,30 @@ progress::-webkit-progress-value {
 	/*main*/
 	
 	main{
+		margin-top:0rem;
 		width:calc(100% - 15rem);
 		float:right;
 	}
 	
-	section{
-		overflow-x:visible;
-
-		display:flex;
-		flex-shrink:0;
-	}
-	section:first-of-type{
-		margin-top:2rem;
-	}
 	h2{
 		font-size:1.3rem;
 	}
 	/*Fluid kaartje*/
-	article, section a{
+	article, main a{
 		flex-grow:1;
 		margin: 2rem 1rem 1rem;
+		max-width:22rem;
 		
 	}
-	section a article{
-		width:100%;
-	}
-	article.breed{
-		min-width:20rem;
+	main a article{
+		width:100%
 	}
 	.breed p:nth-of-type(3)/*beschrijving*/{
+	}
+	[src="img/hart.png"] {
+		padding-left:9rem;
+		left:2rem;
+		padding-bottom:0.7rem;
 	}
 }
 @media (min-width: 92rem){

@@ -2,15 +2,26 @@
 <html>
 <head>
 <meta charset="UTF-8">
+	
+<!-- CSS reset-->	
 <link rel="stylesheet" type="text/css" href="css/reset.css">
-<!-- CSS reset-->
-<link rel="stylesheet" type="text/css" href="css/header.css">
+	
 <!-- Header in aparte stylesheet-->
-<link rel="stylesheet" type="text/css" href="css/index.css">
+<link rel="stylesheet" type="text/css" href="css/header.css">
+
 <!-- Index stylesheet-->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="css/index.css">
+
+<!-- dark mode stylesheet-->
+<link rel="stylesheet" type="text/css" href="css/darkindex.css">
+
+<!-- Fonts-->
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
 <title>Home | NS Stories</title>
+
 </head>
 
 <body>
@@ -19,220 +30,176 @@
 
 <header>
 	<nav>
-		<a href="#">
+		<a href="index.html">
 			<p>NS stories</p>
 			<img alt="home" src="img/nslogo.png">
 		</a>
 		
-		<a href="#">
+		<a href="opgeslagen.html">
 			<p>Opgeslagen</p>
-			<img alt="opgeslagen" src="img/hart.png">
 			<img alt="opgeslagen" src="img/hart.png">
 		</a>
 		
-		<a href="#">
+		<a href="inloggen.html">
 			<p>Login</p>
 			<img alt="login" src="img/login.png">
 		</a>
-		
 	</nav>
 </header>
-	
-<button><img src="img/zoeken.png" alt="zoeken">
-<p>Zoeken</p></button>
-<button><img src="img/darkmode.png" alt="dark mode"><p>Dark mode</p></button>
 
+<!--Microinteractie Zoeken -->
+<a href="zoeken.html">
+	<img src="img/zoeken.png" alt="zoeken">
+	<p>Zoeken</p>
+</a>
 
-<!--search results-->
-<section>
-<input type="search">
-<img alt="zoeken" src="img/zoekenblauw.png">
-<img alt="terug" src="img/terug.png">
-	
-<h2>Titels</h2>
-	<article> <!--Eric Lucassen, Favorieten-->
-			
-			<img alt="vormgegeven verhaal Eric Lucassen" src="img/ericlucassen.jpg">
-			<h3>Blind</h3>
-			<p>45</p>
-			<p>5 min</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis massa. Curabitur lorem lectus, tincidunt sit amet odio placerat, sagittis tempus neque. Sed ut odio a turpis hendrerit venenatis. Nam molestie suscipit massa, ut pretium massa ornare non.</p>
-			<svg viewBox="0 0 512 512">
-				<path d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"/>
-			</svg>
-		</article>
-<h2>Verhalen</h2>
-		
-		<article class="breed"> <!--Eric Lucassen, Favorieten-->
-			
-			<img alt="vormgegeven verhaal Eric Lucassen" src="img/ericlucassen.jpg">
-			<h3>Eric Lucassen</h3>
-			<p>45</p>
-			<p>5 min</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis massa. Curabitur lorem lectus, tincidunt sit amet odio placerat, sagittis tempus neque. Sed ut odio a turpis hendrerit venenatis. Nam molestie suscipit massa, ut pretium massa ornare non.</p>
-			<svg viewBox="0 0 512 512">
-				<path d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"/>
-			</svg>
-			<progress value="100" max="100"></progress>
-		</article>
-</section>
-	
+<!--Microinteractie Darkmode -->
+<button>
+<img src="img/darkmode.png" alt="dark mode">
+<p>Dark mode</p>
+</button>
 
-<main> 
-	
-	<section> <!--Categorie: 5 minuten -->
+<main>
+	<!--Categorie: 5 minuten -->
+	<section>
 		
 		<h2>5 minuten</h2>
 		
-		<article> <!--Eric Lucassen, Favorieten-->
-			
+		<!--Eric Lucassen, Opgeslagen-->
+		<article>
 			<img alt="vormgegeven verhaal Eric Lucassen" src="img/ericlucassen.jpg">
 			<h3>Eric Lucassen</h3>
 			<p>45</p>
 			<p>5 min</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis massa. Curabitur lorem lectus, tincidunt sit amet odio placerat, sagittis tempus neque. Sed ut odio a turpis hendrerit venenatis. Nam molestie suscipit massa, ut pretium massa ornare non.</p>
-			<svg viewBox="0 0 512 512">
-				<path d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"/>
-			</svg>
+			<img alt="opgeslagen" src="img/hart/opgeslagenblauw.png">
 		</article>
 		
-		<article class="breed"> <!--Zombie, deels gelezen-->
-			
+		<!--Zombie, deels gelezen-->
+		<article class="breed">
 			<img alt="vormgegeven verhaal Zombie" src="img/zombie.jpg">
 			<h3>Zombie</h3>
 			<p>12</p>
 			<p>5 min</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis massa. Curabitur lorem lectus, tincidunt sit amet odio placerat, sagittis tempus neque. Sed ut odio a turpis hendrerit venenatis. Nam molestie suscipit massa, ut pretium massa ornare non.</p>
-			<progress value="34" 	max="100"></progress>
+			<p>Duizenden hongerige ondoden lopen zielloos over het stationsplein. Op zoek naar voedsel, naar half vergane hondenlijken, naar vers mensenvlees. Het is gekkenwerk dat ik hier ben, maar de brandstof van de bus is op. Ik hoopte dwars door de menigte wandelende lijken heen te kunnen rauzen. Maar het mocht niet zo zijn.</p>
+			<progress value="34" max="100"></progress>
 		</article>
 		
-		<article> <!--Cowboy-->
-			
+		<!--Cowboy--> 
+		<article>
 			<img alt="vormgegeven verhaal Cowboy" src="img/cowboy.jpg">
 			<h3>Cowboy</h3>
 			<p>89</p>
 			<p>5 min</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis massa. Curabitur lorem lectus, tincidunt sit amet odio placerat, sagittis tempus neque. Sed ut odio a turpis hendrerit venenatis. Nam molestie suscipit massa, ut pretium massa ornare non.</p>
 		</article>
 	</section>
 	
-	
-	<section> <!--Categorie: nog niet afgelezen-->
+	<!--Categorie: nog niet afgelezen-->
+	<section> 
 		
 		<h2>Nog niet afgelezen</h2>
 		
-		<article class="breed"> <!--Vader tot Zoon, deels gelezen--> 
-			
+		<!--Vader tot Zoon, deels gelezen--> 
+		<article class="breed"> 
 			<img alt="vormgegeven verhaal Vader tot Zoon" src="img/vadertotzoon.jpeg">
 			<h3>Vader tot zoon</h3>
 			<p>31</p>
 			<p>15 min</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis massa. Curabitur lorem lectus, tincidunt sit amet odio placerat, sagittis tempus neque. Sed ut odio a turpis hendrerit venenatis. Nam molestie suscipit massa, ut pretium massa ornare non.</p>
+			<p>Je ligt vredig in je wagen te slapen als ik de bus uitstap op die druilerige dag in februari van het jaar 2011. In je groene wagentje. (Daar wil je inmiddels, nu ik dit schrijf, niet meer in. Je wilt zelf lopen of op je fietsje voortgeduwd worden.) Het is guur weer. Een chagrijnig miezerregentje en een venijnig snijdende wind geselen je vader. De mensen zijn met zichzelf bezig.</p>
 			<progress value="75" max="100"></progress>
 		</article>
 		
-		<article> <!--Essentie, favorieten, deels gelezen-->
-			 
+		<!--Essentie, favorieten, deels gelezen--> 
+		<article> 
 			<img alt="vormgegeven verhaal Essentie" src="img/essentie.jpg">
 			<h3>Essentie</h3>
 			<p>1</p>
 			<p>2 min</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis massa. Curabitur lorem lectus, tincidunt sit amet odio placerat, sagittis tempus neque. Sed ut odio a turpis hendrerit venenatis. Nam molestie suscipit massa, ut pretium massa ornare non.</p>
-			<svg viewBox="0 0 512 512">
-				<path d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"/>
-			</svg>
+			<p></p>
+			<img alt="opgeslagen" src="img/hart/opgeslagenblauw.png">
 			<progress value="12" 	max="100"></progress>
 		</article>
 		
-		<article> <!--Haiku deels gelezen--> 
-			
+		<!--Haiku deels gelezen--> 
+		<article> 
 			<img alt="vormgegeven verhaal Haiku" src="img/haiku.jpg">
 			<h3>Haiku</h3>
 			<p>43</p>
 			<p>5 min</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis massa. Curabitur lorem lectus, tincidunt sit amet odio placerat, sagittis tempus neque. Sed ut odio a turpis hendrerit venenatis. Nam molestie suscipit massa, ut pretium massa ornare non.</p>
 			<progress value="12" max="100"></progress>
 		</article>
 	</section>
 	
 	
-	<section> <!--Categorie: Opgeslagen verhalen-->
+	<!--Categorie: Opgeslagen verhalen-->
+	<section> 
 		
 		<h2>Opgeslagen verhalen</h2>
 		
-		<article> <!--Oud testament, opgeslagen--> 
-			
+		<!--Oud testament, opgeslagen--> 
+		<article> 
 			<img alt="vormgegeven verhaal Oud testament" src="img/oudtestament.jpeg">
 			<h3>Oud Testament</h3>
 			<p>58</p>
 			<p>15 min</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis massa. Curabitur lorem lectus, tincidunt sit amet odio placerat, sagittis tempus neque. Sed ut odio a turpis hendrerit venenatis. Nam molestie suscipit massa, ut pretium massa ornare non.</p>
-			<svg viewBox="0 0 512 512">
-				<path d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"/>
-			</svg>
-		</article>
-		
-		<article> <!--Managerstaal, Opgeslagen--> 
+			<img alt="opgeslagen" src="img/hart/opgeslagenblauw.png"> </article>
 			
-			<img alt="vormgegeven verhaal Managerstaal" src="img/managerstaal.jpg">
-			<h3>Managerstaal</h3>
-			<p>45</p>
-			<p>2 min</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis massa. Curabitur lorem lectus, tincidunt sit amet odio placerat, sagittis tempus neque. Sed ut odio a turpis hendrerit venenatis. Nam molestie suscipit massa, ut pretium massa ornare non.</p>
-			<svg viewBox="0 0 512 512">
-				<path d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"/>
-			</svg>
-		</article>
+		<!--Managerstaal, Opgeslagen-->
+		<!--Werkende link naar verhaal.html-->
+		<a href="verhaal.html">
+			<article>
+				<img alt="vormgegeven verhaal Managerstaal" src="img/managerstaal.jpg">
+				<h3>Managerstaal</h3>
+				<p>45</p>
+				<p>2 min</p>
+			<img alt="opgeslagen" src="img/hart/opgeslagenblauw.png"> </article>
+		</a>
 		
-		<article class="breed"> <!--Kinderboek,deels gelezen-->
-			 
+		<!--Kinderboek,deels gelezen, Opgeslagen--> 
+		<article class="breed">
 			<img alt="vormgegeven verhaal Kinderboek" src="img/kinderboek.png">
 			<h3>Kinderboek</h3>
 			<p>75</p>
 			<p>10 min</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis massa. Curabitur lorem lectus, tincidunt sit amet odio placerat, sagittis tempus neque. Sed ut odio a turpis hendrerit venenatis. Nam molestie suscipit massa, ut pretium massa ornare non.</p>
-			<svg viewBox="0 0 512 512">
-				<path d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"/>
-			</svg>
-		</article>
+			<p>Kijk, daar gaat Max. Dag Max! Hij stapt uit de bus. Wat duwt hij daar vooruit? Jawel, een heuse kinderwagen! En wat voor één! Een groene! Zijn zoontje ligt er in te slapen. Die heeft gelukkig geen last van de kou. Want het is koud joh! Het regent een beetje en het waait flink. Alle mensen op het stationsplein kijken naar de grond. Ze hebben hun hoofd diep in hun kraag gestoken. Max is op weg naar de bibliotheek om een boek te lenen. Een boek waarin 99 keer hetzelfde verhaal wordt verteld. Wat is dat een eigenaardig boek, zeg!</p>
+			<img alt="opgeslagen" src="img/hart/opgeslagenblauw.png"> </article>
 	</section>
 	
+	<!--Categorie: Vaak opgeslagen in Haarlem-->
+	<section>
 	
-	<section> <!--Categorie: Vaak opgeslagen in Haarlem-->
 		<h2> Vaak opgeslagen in Haarlem</h2>
 		
-		<article  class="breed"> <!--Hongerwinter, deels gelezen--> 
-			
+		<!--Hongerwinter, deels gelezen-->
+		<article  class="breed"> 
 			<img alt="vormgegeven verhaal Hongerwinter" src="img/hongerwinter.jpg">
 			<h3>Hongerwinter</h3>
 			<p>89</p>
 			<p>10 min</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis massa. Curabitur lorem lectus, tincidunt sit amet odio placerat, sagittis tempus neque. Sed ut odio a turpis hendrerit venenatis. Nam molestie suscipit massa, ut pretium massa ornare non.</p>
+			<p>Mijn voeten en handen heb ik ingezwachteld tegen de kou. Kranten tegen m’n borst. Ik duw een handkar voort waarin mijn zoon vredig ligt te slapen. Centraal Station. De tramrails liggen er kaal bij. Het hout tussen de rails is al lang weggenomen. Ik word geacht het IJ over te steken om in de dorpen boven Amsterdam mijn gouden trouwring te ruilen tegen groenten en aardappelen. Maar in plaats daarvan ben ik op zoek naar Stijloefeningen van Raymond Queneau</p>
 			<progress value="88" max="100"></progress>
 		</article>
 		
-		<article> <!--Jezus, opgeslagen--> 
-			
+		<!--Jezus, opgeslagen-->
+		<article>  
 			<img alt="vormgegeven verhaal Jezus" src="img/jezus.jpg">
 			<h3>Jezus</h3>
 			<p>44</p>
 			<p>15 min</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis massa. Curabitur lorem lectus, tincidunt sit amet odio placerat, sagittis tempus neque. Sed ut odio a turpis hendrerit venenatis. Nam molestie suscipit massa, ut pretium massa ornare non.</p>
-			<svg viewBox="0 0 512 512">
-				<path d="M450.703,124.225C410.233,41.419,287.288,47.821,256,119.967c-31.288-72.146-154.233-78.548-194.703,4.257C13.59,221.837,124.309,314.82,256,448.014C387.691,314.82,498.41,221.837,450.703,124.225z"/>
-			</svg>
-		</article>
-		
-		<article> <!--Scenario--> 
+			<img alt="opgeslagen" src="img/hart/opgeslagenblauw.png"> </article>
 			
+		<!--Scenario--> 	
+		<article> 
 			<img alt="vormgegeven verhaal Scenario" src="img/scenario.jpg">
 			<h3>Scenario</h3>
 			<p>75</p>
 			<p>10 min</p>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras nec mollis massa. Curabitur lorem lectus, tincidunt sit amet odio placerat, sagittis tempus neque. Sed ut odio a turpis hendrerit venenatis. Nam molestie suscipit massa, ut pretium massa ornare non.</p>
 		</article>
+		
 	</section>
+	
 </main>
+
 <script src="js/index.js"></script>
+
 </body>
 </html>

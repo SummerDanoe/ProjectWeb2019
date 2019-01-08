@@ -1,123 +1,200 @@
-@charset "UTF-8";
-/*========== Kleur variabelen*/
-
-:root {
- --achtergrond-grijs: #E6E6E9;
- --blauw: #263272;
- --geel:#FCCC04;
-}
-/*gebruik: var(--achtergrond-grijs)*/
-
-/*========== Algemene selectoren*/
-
-* {
-	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif;
-	/*transition*/
-    -webkit-transition-duration: 0.5s;
-    -webkit-transition-timing-function: ease;
-    transition-duration: 0.5s;
-    transition-timing-function: ease;
-}
-p, h1, h2, h3 {
-	color: var(--blauw);
-}
-
 /*========== Mobiel*/
 
 /*main*/
-main img{
-	width:100%;
+main img {
+	width: 100%;
 }
-
-section{
-	margin-top:3rem;
-	background-color:white;
-	font-size:1.3rem;
-	height:3.5rem;
+section {
+	margin-top: 3rem;
+	background-color: white;
+	font-size: 1.3rem;
+	height: 3.5rem;
 	padding: 1rem;
-	
 }
-h3{
-	float:left;
+h3 {
+	float: left;
 }
 section p:first-of-type /*lengte*/ {
-	float:right;
+	float: right;
+}
+section p:nth-of-type(2) /*nummer*/ {
+	float: right;
+	margin-right: 1rem;
+}
+/*popup*/
+body > p {
+	color: white;
+	background-color: var(--blauw);
+	display: block;
+	padding: 1.5rem;
+	width: 14rem;
+	position: fixed;
+	right: 0.5rem;
+	top: 4rem;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.1rem;
+	text-align: center;
+}
+body > div {
+	width: 0;
+	height: 0;
+	border-left: 0.5rem solid transparent;
+	border-right: 0.5rem solid transparent;
+	border-bottom: 0.8rem solid var(--blauw);
+	position: fixed;
+	top: 3.3rem;
+	right: 4.1rem;
 }
 
-section p:nth-of-type(2) /*nummer*/{
-	float:right;
-	margin-right:1rem;
-}
-/*buttons, overschrijft header.ss*/
 
-button:nth-of-type(3)/*darkmode*/{
-	padding:0.5em;
-	bottom:13rem;
-}
+
 /*========== Mobiel tussen*/
 
 @media (min-width: 30rem) {
-
+/*pijltje*/
+body > div {
+	top: 3.3rem;
+	right: 8.6rem;
+}
 }
 
 /*========== Tablet*/
 
 @media (min-width: 45rem) {
-		
-section p:first-of-type /*lengte*/ {
-	margin-right:3rem;
+	section p:first-of-type /*lengte*/ {
+	margin-right: 3rem;
 }
-	button:nth-of-type(3)/*opslaan*/{
-		background-color:var(--blauw);
-		position:absolute;
-		padding:0;
-		height:2.5rem;
-		width:2.5rem;
-		top:3.5rem;
-		right:1rem;
+button/*opslaan*/ {
+	background-color: var(--blauw);
+	position: absolute;
+	padding: 0.3rem;
+	height: 2.5rem;
+	width: 2.5rem;
+	top: 3.5rem;
+	right: 1rem;
+	
+}
+/*buttons, overschrijft header.css*/
+	
+header nav a:nth-of-type(2) p /*opgeslagen*/{
+		right:11rem;
+	} 
+header nav a:nth-of-type(3) p/*login*/{
+		right:3.5rem;
 		
 	}
+	
+	[src="img/hart.png"] {
+	top:0.5rem;
+	right:8rem;
+	}
+	
+	[src="img/login.png"] {
+	top:0.5rem;
+	right:1rem;
+	}
+/*buttons, overschrijft header.css*/
+header nav a:nth-of-type(2) p /*opgeslagen*/{
+		right:11rem;
+	} 
+	header nav a:nth-of-type(3) p/*login*/{
+		right:3.5rem;
+		
+	}
+	
+	[src="img/hart.png"] {
+	top:0.5rem;
+	right:8rem;
+	}
+	
+	[src="img/login.png"] {
+	top:0.5rem;
+	right:1rem;
+	}
+	
+	/*popup*/
+	body > p {
+	right: 5rem;
+}
+
 }
 
 /*========== Tablet tussen*/
 
-@media (min-width: 60rem){
+@media (min-width: 60rem) {
 
 }
-
 
 /*========== desktop*/
 
-@media (min-width: 70rem){
-	main{
-		width:calc(100% - 15rem);
-		float:right;
-		background-color:var(--achtergrond-grijs);
-	}
-	section , main img{
-		margin:1rem 10%;
-	}
-	
-	main img{
-		width:calc(80%);
-	}
-		button:nth-of-type(3)/*opslaan*/{
-		padding:0;
-		height:2.5rem;
-		width:2.5rem;
-		top:1.5rem;
-		right:9%;
-		
-	}
+@media (min-width: 70rem) {
+main {
+	width: calc(100% - 15rem);
+	float: right;
+	background-color: var(--achtergrond-grijs);
+}
+section, main img {
+	margin: 1rem 10%;
+}
+main img {
+	width: calc(80%);
+}
+button/*opslaan*/ {
+	position: absolute;
+	padding: 0.2rem;
+	height: 2.5rem;
+	width: 2.5rem;
+	top: 1.5rem;
+	left: 87.5%;
+}
+button img {
+	position: absolute;
+	padding: 0.2rem;
+	height: 2.5rem;
+	width: 2.5rem;
+	top: 0;
+	left: 0;
+}
+body > div {
+	border-top: 0.5rem solid transparent;
+	border-bottom: 0.5rem solid transparent;
+	border-right: 0.7rem solid var(--blauw);
+	top: 10rem;
+	left: 14.6rem;
 }
 
+body > p {
+
+	top: 9rem;
+	left: 15.7rem;
+}
+	/*overschrijft header.css*/
+	
+	/*header*/
+	header nav a:nth-of-type(2) p /*opgeslagen*/{
+		left:2rem;
+		top:10rem;
+	} 
+	
+	[src="img/hart.png"] {
+		top:9.8rem;
+		left:11rem;
+		width:2rem;
+		height:auto;
+	}
+	header nav a:nth-of-type(3) p/*login*/{
+		left:2rem;
+		top:13.6rem;
+	}
+
+	[src="img/login.png"] {
+		width:2rem;
+		height:auto;
+		top:13rem;
+		left:11rem;
+	}
+}
 /*========== Ik ben te lui om te ontwerpen voor schermen als deze:
 https://www.samsung.com/us/computing/monitors/gaming/49--chg90-qled-gaming-monitor-lc49hg90dmnxza/
 Misschien doe ik dat als ik later zin heb. 
 */
-@media (min-width: 92rem){
-	body, main{
-		background-color:red;
-	}
-}

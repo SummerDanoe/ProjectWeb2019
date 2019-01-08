@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /*========== Kleur variabelen*/
 
 :root {
@@ -15,6 +13,7 @@
 	box-sizing: border-box;
 	font-family: 'Roboto', sans-serif;
 	/*transition*/
+	/*bron:https://www.w3schools.com/css/css3_transitions.asp*/
     -webkit-transition-duration: 0.5s;
     -webkit-transition-timing-function: ease;
     transition-duration: 0.5s;
@@ -44,7 +43,6 @@ header nav a p {
 }
 header nav a {
 	font-family: 'Roboto', sans-serif;
-	color: white;
 }
 header nav a img {
 	display: block;
@@ -65,30 +63,31 @@ header nav a img {
 }
 
 /*button*/
-button{
+button , [href="zoeken.html"] {
+	display:block;
 	z-index: 1;
 	height:3rem;
 	width:3rem;
 	background-color: var(--blauw);
 	position:fixed;
-	bottom:0;
 	padding:0;
 	border:0;
 	border-radius:0;
+	border-radius:0.15rem;
 }
-button p{
+button p, [href="zoeken.html"] p{
 	display:none;
 }
 
-button img{
+button img, [href="zoeken.html"] img{
 	height:100%;
 	width:100%;
 	
 }
-button:first-of-type/*zoeken*/{
+[href="zoeken.html"] /*zoeken*/ {
 	bottom:9rem;
 }
-button:nth-of-type(2)/*darkmode*/{
+button/*darkmode*/{
 	padding:0.7em;
 	bottom:5rem;
 }
@@ -107,13 +106,11 @@ button:nth-of-type(2)/*darkmode*/{
 	header nav a:first-of-type /*NS stories*/ p{
 		display:none;
 	}
-	
 	header nav a:nth-of-type(2) p /*opgeslagen*/{
 		right:11rem;
 	} 
 	header nav a:nth-of-type(3) p/*login*/{
 		right:3.5rem;
-		
 	}
 	
 	[src="img/hart.png"] {
@@ -133,15 +130,11 @@ button:nth-of-type(2)/*darkmode*/{
 	
 	/*header*/
 	
-	header nav a p {
-		display:block;
-		position:fixed;
-		font-size:1.1rem;
-		top:0.9rem;
-	}
 	header nav a:first-of-type /*NS stories*/ p{
+		display:block;
 		left:7rem;
 	}
+	
 	
 	header nav a:nth-of-type(2) p /*opgeslagen*/{
 		right:17rem;
@@ -168,14 +161,14 @@ button:nth-of-type(2)/*darkmode*/{
 
 	/*buttons*/
 	
-	button{
+	button, [href="zoeken.html"]{
 		background-color:transparent;
 	}
-	button:first-of-type/*zoeken*/{
+	[href="zoeken.html"]/*zoeken*/{
 		top:-0.1rem;
 		right:0.5rem;
 	}
-	button:nth-of-type(2)/*darkmode*/{
+	button/*darkmode*/{
 		top:-0.1rem;
 		right:3.5rem;
 	}
@@ -186,8 +179,7 @@ button:nth-of-type(2)/*darkmode*/{
 @media (min-width: 60rem){
 	
 	/*de transition op de button was echt intens lelijk dus ik moest er iets aan doen*/
-	
-	button img{
+	button img, [href="zoeken.html"] img{
 	-moz-transition: none;
     -webkit-transition: none;
     transition: none;
@@ -244,39 +236,39 @@ button:nth-of-type(2)/*darkmode*/{
 		left:11rem;
 	}
 	
-	button{
+	button, [href="zoeken.html"]{
 		position:fixed;
-		/*border:white dotted;*/
 		cursor:pointer;
 		width:15rem;
 		padding:0;
 		margin:0;
 		
 	}
-	button:first-of-type/*zoeken*/{
+	[href="zoeken.html"]/*zoeken*/{
 		left:0;
 		top:16rem;
 	}
-	button:nth-of-type(2)/*dark mode*/{
+	button/*dark mode*/{
 		left:0;
-		top:19rem;
+		top:20.5rem;
 	}
-	button p{
+	button p, [href="zoeken.html"] p{
 		font-size:1.3rem;
 		color:white;
 		display:block;
 		position:fixed;
+		font-family: 'Roboto', sans-serif;
 		
 	}
-	button img{
+	button img, [href="zoeken.html"] img{
 	height:2rem;
 	width:2rem;
 	}
-	button:first-of-type p/*zoeken*/{
+	[href="zoeken.html"] p/*zoeken*/{
 		top:17.2rem;
 		left:2rem;
 	}
-	button:first-of-type img/*zoeken*/{
+	[href="zoeken.html"] img/*zoeken*/{
 		position:fixed;
 		height:3rem;
 		width:3rem;
@@ -284,12 +276,12 @@ button:nth-of-type(2)/*darkmode*/{
 		left:10.3rem;
 	}
 	
-	button:nth-of-type(2) p/*Dark mode*/{
+	button p/*Dark mode*/{
 		top:21rem;
 		left:2rem;
 	}
 	
-	button:nth-of-type(2) img /*dark mode*/{
+	button img /*dark mode*/{
 		position:fixed;
 		height:2rem;
 		width:2rem;
@@ -297,4 +289,13 @@ button:nth-of-type(2)/*darkmode*/{
 		left:11rem;
 	}
 
+}
+/*Ik ben te lui om te ontwerpen voor schermen als deze:
+https://www.samsung.com/us/computing/monitors/gaming/49--chg90-qled-gaming-monitor-lc49hg90dmnxza/
+Misschien doe ik dat als ik later zin heb. 
+*/
+@media (min-width: 92rem) {
+body {
+	background-color: red;
+}
 }

@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/*========== Kleur variabelen*/
+
+:root {
+ --achtergrond-grijs: #E6E6E9;
+ --blauw: #263272;
+ --geel:#FCCC04;
+}
+/*gebruik: var(--achtergrond-grijs)*/
+
+/*========== Algemene selectoren*/
+
+* {
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	/*transition*/
+    -webkit-transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+}
+p, h1, h2, h3 {
+	color: var(--blauw);
+}
+
+/*========== Mobiel*/
+
+/*main*/
+main img{
+	width:100%;
+}
+
+section{
+	margin-top:3rem;
+	background-color:white;
+	font-size:1.3rem;
+	height:3.5rem;
+	padding: 1rem;
+	
+}
+h3{
+	float:left;
+}
+section p:first-of-type /*lengte*/ {
+	float:right;
+}
+
+section p:nth-of-type(2) /*nummer*/{
+	float:right;
+	margin-right:1rem;
+}
+
+/*popup*/
+
+body > p{
+	color:white;
+	background-color:var(--blauw);
+	display:block;
+	padding:1rem;
+	width:12rem;
+	position:fixed;
+	right:0.5rem;
+	top:4rem;
+	font-family: 'Roboto', sans-serif;
+	font-size:1.1rem;
+}
+
+body > div{
+    width: 0;
+    height: 0;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    border-bottom: 0.7rem solid var(--blauw);
+	position:fixed;
+	top:3.3rem;
+	right:4.1rem;
+	
+}
+/*========== Mobiel tussen*/
+
+@media (min-width: 30rem) {
+/*pijltje*/
+	body > div{
+	top:3.3rem;
+	right:8.6rem;
+	
+}
+}
+
+/*========== Tablet*/
+
+@media (min-width: 45rem) {
+		
+section p:first-of-type /*lengte*/ {
+	margin-right:3rem;
+}
+	button/*opslaan*/{
+		background-color:var(--blauw);
+		position:absolute;
+		padding:0.2rem;
+		height:2.5rem;
+		width:2.5rem;
+		top:3.5rem;
+		right:1rem;
+		
+	}
+
+	/*popup*/
+
+body > p{
+	right:10rem;
+	top:4rem;
+}
+
+body > div{
+	top:3.3rem;
+	right:14.6rem;
+	
+}
+
+}
+
+/*========== Tablet tussen*/
+
+@media (min-width: 60rem){
+
+
+}
+
+
+/*========== desktop*/
+
+@media (min-width: 70rem){
+	main{
+		width:calc(100% - 15rem);
+		float:right;
+		background-color:var(--achtergrond-grijs);
+	}
+	section , main img{
+		margin:1rem 10%;
+	}
+	
+	main img{
+		width:calc(80%);
+	}
+	section{
+		position:relative;
+	}
+		button/*opslaan*/{
+			position:absolute;
+		padding:0.2rem;
+		height:2.5rem;
+		width:2.5rem;
+		top:3.5rem;
+		right:1rem;
+		
+	}
+
+	/*popup*/
+
+body > p{
+	left:15.8rem;
+	top:8rem;
+}
+
+body > div{
+	border-top: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
+    border-right: 0.7rem solid var(--blauw);
+	top:10rem;
+	left:14.6rem;
+
+	
+}
+}
+
+/*========== Ik ben te lui om te ontwerpen voor schermen als deze:
+https://www.samsung.com/us/computing/monitors/gaming/49--chg90-qled-gaming-monitor-lc49hg90dmnxza/
+Misschien doe ik dat als ik later zin heb. 
+*/
+@media (min-width: 92rem){
+	body, main{
+		background-color:red;
+	}
+}
